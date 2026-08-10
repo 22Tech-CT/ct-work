@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖表</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent}
+body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:12px 16px}
+.chart{position:relative;height:290px}
+.cap{color:#67757f;font-size:13px;margin-top:8px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="chart"><canvas id="cOwn"></canvas></div>
+  <div class="cap">自有品牌營收指數(合作前第2年=100)。<br>資料來源:Shopify 自有商品銷售｜四段各 12 個月,2022/10–2026/07。</div>
+</div>
+<script>
+(function(){
+  function draw(){
+    var NAVY='#24262e',TEAL='#566487',ORANGE='#a83048',SAND='#c3d2df',GREY='#9aa0a8',RED='#a83048',PURP='#566487',LGREY='#d7dade';
+    Chart.defaults.font.family='"Microsoft JhengHei","Noto Sans TC",sans-serif';
+    Chart.defaults.font.size=12;
+    Chart.defaults.plugins.legend.labels.boxWidth=12;
+    var tl=["23Q4","24Q1","24Q2","24Q3","24Q4","25Q1","25Q2","25Q3","25Q4","26Q1","26Q2"];
+
+    new Chart(document.getElementById('cOwn'),{type:'bar',
+      data:{labels:['合作前\n第2年','合作前\n一年','合作後\n一年','最新\n一年'],datasets:[
+        {label:'自有品牌營收指數',data:[100,56,177,305],backgroundColor:[GREY,ORANGE,TEAL,NAVY]}]},
+      options:{maintainAspectRatio:false,plugins:{legend:{display:false}},
+        scales:{y:{title:{display:true,text:'營收指數(=100)'},grid:{color:'#eee'}}}}});
+  }
+  if(window.Chart){draw();}else{
+    var t=setInterval(function(){if(window.Chart){clearInterval(t);draw();}},100);
+  }
+})();
+</script>
+</body></html>

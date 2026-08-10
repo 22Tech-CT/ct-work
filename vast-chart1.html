@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>圖表</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:transparent}
+body{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif}
+.wrap{max-width:640px;margin:0 auto;padding:12px 16px}
+.chart{position:relative;height:330px}
+.cap{color:#67757f;font-size:13px;margin-top:8px;line-height:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="chart"><canvas id="cFlip"></canvas></div>
+  <div class="cap">合作前後關鍵指標年增率對比。<br>資料來源:Shopify｜期間:合作前一年 vs 合作後一年。</div>
+</div>
+<script>
+(function(){
+  function draw(){
+    var NAVY='#24262e',TEAL='#566487',ORANGE='#a83048',SAND='#c3d2df',GREY='#9aa0a8',RED='#a83048',PURP='#566487',LGREY='#d7dade';
+    Chart.defaults.font.family='"Microsoft JhengHei","Noto Sans TC",sans-serif';
+    Chart.defaults.font.size=12;
+    Chart.defaults.plugins.legend.labels.boxWidth=12;
+    var tl=["23Q4","24Q1","24Q2","24Q3","24Q4","25Q1","25Q2","25Q3","25Q4","26Q1","26Q2"];
+
+    new Chart(document.getElementById('cFlip'),{type:'bar',
+      data:{labels:['新客數','訂單數','流量(工作階段)','回購客'],datasets:[
+        {label:'合作前一年 YoY',data:[-45,-30,28,-6],backgroundColor:GREY},
+        {label:'合作後一年 YoY',data:[112,83,153,74],backgroundColor:TEAL}]},
+      options:{maintainAspectRatio:false,
+        scales:{y:{title:{display:true,text:'年增率 %'},grid:{color:'#eee'}}},
+        plugins:{tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+(c.raw>0?'+':'')+c.raw+'%';}}}}}});
+  }
+  if(window.Chart){draw();}else{
+    var t=setInterval(function(){if(window.Chart){clearInterval(t);draw();}},100);
+  }
+})();
+</script>
+</body></html>
