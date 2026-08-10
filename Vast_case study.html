@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>成長行銷案例</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--navy:#24262e;--teal:#566487;--orange:#a83048;--sand:#c3d2df;--grey:#9aa0a8;--red:#a83048;--ink:#24262e;--bg:#fff;--soft:#f7efe9;--purp:#566487;}
+*{box-sizing:border-box}
+.cs{font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;color:var(--ink);line-height:1.75;max-width:960px;margin:0 auto;padding:8px 18px 60px;background:var(--bg)}
+.cs h1{font-size:30px;line-height:1.3;margin:14px 0 6px;color:var(--navy)}
+.cs .kick{color:var(--teal);font-weight:800;letter-spacing:2px;font-size:13px;margin-top:18px}
+.cs .lead{font-size:17px;color:#3a4a57;margin:6px 0 4px}
+.cs h2{font-size:22px;color:var(--navy);margin:34px 0 4px;padding-left:12px;border-left:5px solid var(--teal)}
+.cs h2 .n{color:var(--teal);font-weight:800;margin-right:8px}
+.cs h3{font-size:16.5px;color:var(--navy);margin:22px 0 2px}
+.cs p{font-size:15.5px;margin:8px 0}
+.cs .muted{color:#67757f;font-size:13px}
+.cs b.t{color:var(--teal)}.cs b.o{color:var(--orange)}.cs b.n{color:var(--navy)}
+.cs .card{background:var(--soft);border-radius:14px;padding:16px 18px;margin:14px 0}
+.cs .chart{position:relative;height:330px;margin:6px 0}
+.cs .chart.sm{height:290px}
+.cs .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:680px){.cs .grid{grid-template-columns:1fr}}
+.cs .stat{background:var(--navy);color:#fff;border-radius:14px;padding:16px;text-align:center}
+.cs .stat .big{font-size:30px;font-weight:800;line-height:1.1}
+.cs .stat.tl{background:var(--teal)}.cs .stat.or{background:var(--orange)}
+.cs .stat .lb{font-size:12.5px;opacity:.9;margin-top:4px}
+.cs .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:14px 0}
+@media(max-width:680px){.cs .stats{grid-template-columns:1fr 1fr}}
+.cs .pill{display:inline-block;background:#eef2f6;color:var(--teal);border-radius:20px;padding:3px 12px;font-size:13px;font-weight:700;margin:3px 4px 3px 0}
+.cs .kw{width:100%;border-collapse:collapse;font-size:14px;margin:8px 0}
+.cs .kw th,.cs .kw td{border-bottom:1px solid #e3e8ee;padding:8px 10px;text-align:left}
+.cs .kw th{color:#fff;background:var(--navy)}
+.cs .kw .up{color:var(--teal);font-weight:800}
+.cs .cap{font-size:13px;color:#67757f;margin:2px 0 0}
+.cs .divider{height:1px;background:#e3e8ee;margin:30px 0}
+.cs .foot{margin-top:34px;padding:16px 18px;background:var(--navy);color:#dfe8ee;border-radius:14px;font-size:13px}
+</style></head>
+<body><div class="cs">
+
+<div class="kick">成長行銷案例 ｜ GROWTH MARKETING CASE</div>
+<h1>把「脆弱成長」翻轉成「健康成長」<br>一個台灣衝浪生活風格品牌的雙軌流量策略</h1>
+<p class="lead">合作前,品牌的<b class="o">新客與訂單正在衰退</b>,營收只靠少數高單價代理商品硬撐;合作首年,我們以<b class="n">短期廣告投放 × 長期 SEO / GEO</b> 的雙軌流量策略,帶動<b class="t">自有品牌</b>成為成長主引擎——而且不是靠折扣。</p>
+
+<div class="stats">
+  <div class="stat"><div class="big">+112%</div><div class="lb">新客數(合作後一年 YoY)<br>合作前為 −45%</div></div>
+  <div class="stat tl"><div class="big">+83%</div><div class="lb">訂單數(合作後一年 YoY)<br>合作前為 −30%</div></div>
+  <div class="stat or"><div class="big">×3</div><div class="lb">自有品牌營收<br>成長主引擎</div></div>
+  <div class="stat" style="background:#6b7690"><div class="big">#1</div><div class="lb">多篇為 Google AI<br>概覽第 1 引用來源</div></div>
+</div>
+
+<h2><span class="n">01</span>挑戰:看似成長,實則脆弱</h2>
+<p>合作前那一年,品牌<b class="o">營收帳面還在成長</b>,但拆開來看——<b>訂單數與新客數雙雙衰退</b>。成長全靠少數高單價代理商品撐著,真正的客群其實在流失。這是典型「不可持續」的成長。</p>
+<div class="card"><div class="chart sm"><canvas id="cFlip"></canvas></div>
+<div class="cap">各指標「年增率(YoY)」:合作前一年 vs 合作後一年。合作後由負轉正、全面翻揚。<br><span class="muted">資料來源:Shopify(訂單/新客/工作階段)｜期間:合作前一年 2023/10–2024/09、合作後一年 2024/10–2025/09。</span></div></div>
+
+<h2><span class="n">02</span>策略:成長來自流量</h2>
+<p>成長的核心是<b class="n">流量</b>。我們用<b>短期廣告投放</b>與<b class="t">長期 SEO / GEO</b> 兩個引擎,把整體進站流量大幅做大,帶動<b class="t">自有商品營收</b>同步走升。<b>轉換率始終維持低檔且未上升</b>——證明成長是「流量帶動」,而非靠拉高轉換或客單價(也點出下一階段 CRO 的空間)。</p>
+<div class="card"><div class="chart"><canvas id="cTraffic"></canvas></div>
+<div class="cap">總體流量指數(藍線)為左軸;營收柱狀為堆疊(綠＝自有商品、灰＝非自有商品,以合作起始季總營收=100 指數化);轉換率(橘虛線)為右軸實際 %。流量與自有商品營收同步走升、自有占比提升,轉換率維持低檔。<br><span class="muted">資料來源:Shopify(工作階段、自有/非自有商品銷售、訂單)｜期間:2023Q4–2026Q2。</span></div></div>
+<p><span class="pill">短期槓桿｜廣告投放</span><span class="pill">長期槓桿｜內容 SEO / GEO</span><span class="pill">流量驅動｜非靠折扣或客單價</span></p>
+
+<h2><span class="n">03</span>變現:流量由「自有品牌」承接</h2>
+<p>帶進來的流量,主要由<b class="t">自有品牌服飾</b>承接變現,而非高單價代理板。自有品牌營收成長逾一倍,貢獻整體成長<b>逾一半</b>。</p>
+<div class="grid">
+  <div class="card"><div class="chart sm"><canvas id="cOwn"></canvas></div><div class="cap">自有品牌營收指數(合作前第2年=100)。<br><span class="muted">資料來源:Shopify 自有商品銷售｜期間:四段各 12 個月,2022/10–2026/07。</span></div></div>
+  <div class="card"><div class="chart sm"><canvas id="cCat"></canvas></div><div class="cap">自有品牌主力品類成長率(同期 YoY)。<br><span class="muted">資料來源:Shopify 自有商品(依產品類型)｜期間:1–7 月同期,2025 vs 2026。</span></div></div>
+</div>
+
+<h2><span class="n">04</span>廣告策略:跳出衝浪同溫層,擴大受眾</h2>
+<p>服飾廣告最關鍵的操作不是素材,而是<b class="n">受眾策略</b>。品牌雖是衝浪利基,但資料顯示:只打<b class="o">「衝浪同溫層」效能最低</b>;把受眾擴展到<b class="t">都會潮流/生活風格、旅行/戶外</b>客群,並用 ASC 讓演算法自動找人,效能約 <b>1.8 倍</b>——而且是主要花費與成長來源。同時建立<b>完整漏斗</b>(觸及→加購→購買),不只做下層收割。</p>
+<div class="card"><div class="chart sm"><canvas id="cAudience"></canvas></div>
+<div class="cap">廣告效能指數 ＝ 各受眾廣告 ROAS(購買轉換值÷花費)相對「衝浪同溫層」的比值(=100),非受眾規模。擴大到生活風格/旅行客群,效能約 1.8 倍。<br><span class="muted">資料來源:Meta 廣告(服飾/非衝浪板活動;ROAS 為平台回報,含 view-through,故以相對指數呈現)｜期間:2025/01–2026/07。</span></div></div>
+<p><span class="pill">跳出同溫層｜擴大受眾</span><span class="pill">全漏斗｜觸及→加購→購買</span><span class="pill">ASC｜演算法找人</span></p>
+
+<h2><span class="n">05</span>SEO / GEO:一套內容引擎,兩種收割</h2>
+<p>長期引擎是<b class="n">內容</b>。以部落格的浪點攻略、穿搭與教學文切入需求——把<b class="t">自然搜尋流量</b>做起來、商品關鍵字排名往前推,而且同一批內容還被 <b class="n">AI 搜尋</b>引用為答案來源。<b>一套內容,同時在傳統搜尋與 AI 搜尋兩邊收割。</b></p>
+
+<h3>① 自然搜尋流量:複利式成長</h3>
+<div class="card"><div class="chart sm"><canvas id="cSEO"></canvas></div>
+<div class="cap">自然搜尋(SEO)流量指數(季度,合作起始季 24Q4=100)。合作後先蓄積、約半年起量,呈內容複利曲線。<br><span class="muted">資料來源:Shopify 流量分析(自然搜尋)｜期間:2023Q4–2026Q2。</span></div></div>
+
+<h3>② 商品/穿搭關鍵字:排名整體往前</h3>
+<table class="kw"><thead><tr><th>商品/穿搭關鍵字</th><th>合作起始</th><th>近期</th></tr></thead><tbody>
+<tr><td>衝浪褲(核心字)</td><td>第一頁後段</td><td class="up">第一頁前段</td></tr>
+<tr><td>衝浪褲品牌 / 海灘褲品牌</td><td>深頁 / 未上榜</td><td class="up">第一頁</td></tr>
+<tr><td>防磨衣 / 防曬(機能)</td><td>未上榜</td><td class="up">第一頁</td></tr>
+<tr><td>帽子穿搭(男)</td><td>未上榜</td><td class="up">第一頁前段</td></tr>
+</tbody></table>
+<p class="muted">註:搜尋排名會隨演算法與季節波動,上表為近期的區間表現,呈現「方向性的顯著前進」而非固定名次。資料來源:Ahrefs 自然關鍵字排名(對比合作起始 2024/10 與近期 2026/08)。</p>
+
+<h3>③ GEO:被 Google AI 概覽引用為答案來源</h3>
+<p>SEO 的延伸是 <b class="n">GEO(生成式引擎最佳化)</b>——讓內容被 AI 搜尋當成答案。品牌部落格已被 <b class="t">Google AI 概覽</b>(及 Perplexity、Copilot、Gemini、ChatGPT 等)引用,不少在 AI 概覽中位居第一。以下為部分被引用的關鍵字與月搜尋量:</p>
+<table class="kw"><thead><tr><th>被 AI 概覽引用的關鍵字</th><th>月搜尋量</th><th>內容類型</th></tr></thead><tbody>
+<tr><td>海灘褲</td><td>2,200</td><td>服飾/穿搭</td></tr>
+<tr><td>衝浪褲</td><td>1,200</td><td>服飾/穿搭(AI 概覽第 1)</td></tr>
+<tr><td>男生短褲穿搭</td><td>800</td><td>服飾/穿搭</td></tr>
+<tr><td>高爾夫球帽</td><td>500</td><td>帽子穿搭(第 1)</td></tr>
+<tr><td>棒球帽推薦</td><td>500</td><td>帽子穿搭(第 1)</td></tr>
+<tr><td>fin 魚鰭</td><td>8,800</td><td>裝備知識</td></tr>
+<tr><td>毛巾衣 poncho</td><td>2,000</td><td>裝備知識</td></tr>
+<tr><td>wetsuit 防寒衣</td><td>250</td><td>裝備知識(第 1)</td></tr>
+<tr><td>蜜月灣</td><td>500</td><td>浪點攻略(第 1)</td></tr>
+<tr><td>衝浪教學</td><td>450</td><td>教學(第 1)</td></tr>
+<tr><td>台東衝浪</td><td>200</td><td>浪點攻略(第 1)</td></tr>
+<tr><td>衝浪褲品牌</td><td>60</td><td>品牌(第 1)</td></tr>
+</tbody></table>
+<p class="cap"><span class="muted">資料來源:Ahrefs — Google AI Overview 引用(台灣)｜擷取時間:2026/08。月搜尋量為 Ahrefs 估算值;全站約 40–50 個關鍵字觸發 Google AI 概覽引用,上表為代表性節選。</span></p>
+
+<h2><span class="n">06</span>關鍵佐證:成長不是靠折扣買來的</h2>
+<p>最容易被質疑的一點:「是不是靠降價衝量?」資料說：<b>不是</b>。合作前折扣砸最重(近對折)的那一年,自有品牌營收反而最低;合作後折扣一路收斂,營收卻成長數倍。</p>
+<div class="card"><div class="chart"><canvas id="cDisc"></canvas></div>
+<div class="cap">自有品牌:營收指數(柱)vs 折扣率(線)。折扣越砍越少、營收越漲越高。<br><span class="muted">資料來源:Shopify 自有商品(折扣率＝折扣÷原價銷售總額)｜期間:四段各 12 個月,2022/10–2026/07。</span></div></div>
+
+<div class="divider"></div>
+<h2>為什麼這是「操作」帶來的?</h2>
+<p>我們用四層證據排除「本來就會成長」與「季節性」:<b>①時間點吻合</b>——多個獨立指標在合作啟動的同一時點反轉;<b>②反轉而非延續</b>——合作前這些指標是下滑的;<b>③SEO 滯後曲線</b>——符合內容複利特徵;<b>④產品線層級歸因</b>——關鍵字與素材對得上特定產品線的起量。</p>
+<p class="lead"><b class="n">第一階段:把生意與客群做大。第二階段:把規模化轉成賺錢的成長(轉換率優化、投放節奏、毛利管理)。</b></p>
+
+<div class="foot">本案例所有數據皆以<b>相對值/指數化</b>呈現,不含實際金額。案例產業為衝浪生活風格品牌,但同一套成長方法論——<b>雙軌流量(廣告 × SEO/GEO)、受眾與內容策略、以數據驗證成效</b>——同樣適用於 B2B、B2C、DTC 與電商等不同商業模式。<br>— 想聊聊你的品牌或企業成長?歡迎與我們聯繫。</div>
+
+</div>
+<script>
+const NAVY='#24262e',TEAL='#566487',ORANGE='#a83048',SAND='#c3d2df',GREY='#9aa0a8',RED='#a83048',PURP='#566487',LGREY='#d7dade';
+Chart.defaults.font.family='"Microsoft JhengHei","Noto Sans TC",sans-serif';
+Chart.defaults.font.size=12; Chart.defaults.plugins.legend.labels.boxWidth=12;
+const mk=(id,cfg)=>{const el=document.getElementById(id);if(el)new Chart(el,cfg);};
+
+mk('cFlip',{type:'bar',data:{labels:['新客數','訂單數','流量(工作階段)','回購客'],datasets:[
+ {label:'合作前一年 YoY',data:[-45,-30,28,-6],backgroundColor:GREY},
+ {label:'合作後一年 YoY',data:[112,83,153,74],backgroundColor:TEAL}]},
+ options:{maintainAspectRatio:false,scales:{y:{title:{display:true,text:'年增率 %'},grid:{color:'#eee'}}},
+ plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+(c.raw>0?'+':'')+c.raw+'%'}}}}});
+
+const tl=["23Q4","24Q1","24Q2","24Q3","24Q4","25Q1","25Q2","25Q3","25Q4","26Q1","26Q2"];
+const own=[14,11,9,13,45,23,23,61,56,26,95];    // 自有商品營收指數(總營收24Q4=100)
+const non=[28,81,23,82,55,42,59,83,52,13,156];   // 非自有商品營收指數
+const totf=[58,47,57,69,100,66,128,290,324,209,423];
+const cvr=[0.35,0.29,0.26,0.33,0.44,0.24,0.19,0.16,0.14,0.15,0.20];
+mk('cTraffic',{data:{labels:tl,datasets:[
+ {type:'bar',label:'自有商品營收',data:own,backgroundColor:TEAL,yAxisID:'y',stack:'rev',order:3},
+ {type:'bar',label:'非自有商品營收',data:non,backgroundColor:'#c3d2df',yAxisID:'y',stack:'rev',order:3},
+ {type:'line',label:'總體流量指數',data:totf,borderColor:'#24262e',backgroundColor:'#24262e',yAxisID:'y2',tension:.35,pointRadius:3,borderWidth:2.8,order:1},
+ {type:'line',label:'轉換率 %',data:cvr,borderColor:ORANGE,backgroundColor:ORANGE,yAxisID:'y1',tension:.3,pointRadius:3,borderWidth:2.4,borderDash:[5,3],order:1}]},
+ options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+  scales:{x:{stacked:true},
+   y:{position:'left',stacked:true,min:0,max:460,title:{display:true,text:'流量 / 營收 指數(合作起始季=100)'},grid:{color:'#eee'}},
+   y2:{position:'left',stacked:false,min:0,max:460,display:false},
+   y1:{position:'right',min:0,max:0.6,title:{display:true,text:'轉換率 %'},grid:{drawOnChartArea:false}}},
+  plugins:{tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.raw+(c.dataset.label.includes('率')?'%':'')}}}}});
+
+mk('cOwn',{type:'bar',data:{labels:['合作前\n第2年','合作前\n一年','合作後\n一年','最新\n一年'],datasets:[
+ {label:'自有品牌營收指數',data:[100,56,177,305],backgroundColor:[GREY,ORANGE,TEAL,NAVY]}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'營收指數(=100)'},grid:{color:'#eee'}}}}});
+
+mk('cCat',{type:'bar',data:{labels:['機能衝浪褲','Aqua Terra 防曬系列','復古短版衝浪褲','T-Shirt','自有品牌整體'],datasets:[
+ {label:'同期 YoY 成長率',data:[793,240,367,162,194],backgroundColor:TEAL}]},
+ options:{indexAxis:'y',maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'+'+c.raw+'%'}}},
+ scales:{x:{title:{display:true,text:'YoY %'},grid:{color:'#eee'}}}}});
+
+mk('cAudience',{type:'bar',data:{labels:['衝浪同溫層(興趣)','都會潮流/生活風格','旅行/戶外生活'],datasets:[
+ {label:'廣告效能指數',data:[100,182,185],backgroundColor:[GREY,TEAL,NAVY]}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>'效能指數 '+c.raw+'（同溫層=100）'}}},
+ scales:{y:{title:{display:true,text:'廣告效能指數(同溫層=100)'},grid:{color:'#eee'}}}}});
+
+const org=[105,88,120,138,100,75,126,210,161,115,252];
+mk('cSEO',{type:'line',data:{labels:tl,datasets:[
+ {label:'自然搜尋(SEO)流量指數',data:org,borderColor:'#566487',backgroundColor:'rgba(86,100,135,0.14)',tension:.35,pointRadius:3,borderWidth:2.8,fill:true}]},
+ options:{maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{title:{display:true,text:'SEO 流量指數(合作起始季=100)'},grid:{color:'#eee'}}}}});
+
+mk('cDisc',{type:'bar',data:{labels:['合作前第2年','合作前一年','合作後一年','最新一年'],datasets:[
+ {type:'bar',label:'自有品牌營收指數',data:[100,56,177,305],backgroundColor:[LGREY,GREY,TEAL,NAVY],yAxisID:'y',order:2},
+ {type:'line',label:'折扣率 %',data:[37,48,34,30],borderColor:ORANGE,backgroundColor:ORANGE,yAxisID:'y1',tension:.3,pointRadius:5,borderWidth:3,order:1}]},
+ options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+ scales:{y:{title:{display:true,text:'營收指數(=100)'},grid:{color:'#eee'}},
+ y1:{position:'right',min:0,max:60,title:{display:true,text:'折扣率 %'},grid:{drawOnChartArea:false}}}}});
+</script>
+</body></html>
