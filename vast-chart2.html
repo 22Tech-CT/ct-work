@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>新客與營收</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>*{box-sizing:border-box}html,body{background:transparent}body{margin:0;font-family:"Microsoft JhengHei","PingFang TC","Noto Sans TC",system-ui,sans-serif;color:#24262e}.wrap{max-width:960px;margin:0 auto;padding:6px 16px 16px}.chart{position:relative;height:380px}@media(max-width:600px){.chart{height:320px}}.cap{font-size:12.5px;color:#8a8f96;margin-top:6px;line-height:1.6}</style></head>
+<body><div class="wrap">
+<div class="chart"><canvas id="c"></canvas></div>
+<div class="cap">營收指數(柱)與新客數指數(線),季度指數化(合作起始季=100)。合作前同季新客明顯衰退(如 24Q3 遠低於 23Q3),合作起始(24Q4)起雙雙回升。<br>資料來源:Shopify(新舊客、總銷售額)｜期間:2023Q1–2026Q2。</div>
+</div>
+<script>
+Chart.defaults.font.family='"Microsoft JhengHei","Noto Sans TC",sans-serif';Chart.defaults.font.size=12;
+new Chart(document.getElementById('c'),{
+ data:{labels:["23Q1","23Q2","23Q3","23Q4","24Q1","24Q2","24Q3","24Q4","25Q1","25Q2","25Q3","25Q4","26Q1","26Q2"],datasets:[
+  {type:'bar',label:'營收指數',data:[11,30,104,43,93,31,95,100,64,82,144,107,39,251],backgroundColor:'#566487',order:2},
+  {type:'line',label:'新客數指數',data:[20,72,134,39,24,30,53,100,33,54,122,103,86,216],borderColor:'#24262e',backgroundColor:'#24262e',tension:.35,pointRadius:3,borderWidth:2.8,order:1}]},
+ options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+  scales:{y:{title:{display:true,text:'新客 / 營收 指數(合作起始季=100)'},grid:{color:'rgba(0,0,0,0.08)'}}},
+  plugins:{legend:{labels:{boxWidth:12}},tooltip:{callbacks:{label:c=>c.dataset.label+': '+c.raw}}}}});
+</script>
+</body></html>
